@@ -84,7 +84,7 @@ h3, h4 {
 .tech-list,
 .lang-list {
   background-repeat: no-repeat;
-  opacity: 0.4;
+  opacity: 1;
 }
 
 .tech-list li,
@@ -105,7 +105,7 @@ h3, h4 {
   background-image: url('../assets/pillar.svg');
   background-size: contain;
   background-repeat: no-repeat;
-  opacity: 0.7;
+  opacity: 1;
   margin-top: 5px;
 }
 
