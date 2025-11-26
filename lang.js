@@ -3,7 +3,7 @@ const translations = {
     mainTitle: "Znanja i sposobnosti",
     name: "Marija Malešević",
     generalTitle: "Opšte",
-    general: "Završila sam gimnaziju (2021–2025), sa završnim radom iz informatike i računarstva na temu „Razvoj operativnih sistema od UNIX-a do modernih OS". Kroz rad sam produbila znanje prvenstveno o procesorskom radu, hardverskim komponentama, njihovoj evoluciji i funkcionalnostima. Posjedujem iskustvo rada u operativnim sistemima (Windows 7/11), kao i s osnovnim računarskim programima i paketima (MS Office). Takođe imam znanje iz baza podataka, uz iskustvo korištenja Microsoft Excela i SQL jezika.",
+    general: "Završila sam gimnaziju (2021–2025), sa završnim radom iz informatike i računarstva na temu „Razvoj operativnih sistema od UNIX-a do modernih OS”. Kroz rad sam produbila znanje prvenstveno o procesorskom radu, hardverskim komponentama, njihovoj evoluciji i funkcionalnostima. Posjedujem iskustvo rada u operativnim sistemima (Windows 7/11), kao i s osnovnim računarskim programima i paketima (MS Office). Takođe imam znanje iz baza podataka, uz iskustvo korištenja Microsoft Excela i SQL jezika.",
     hobbiesTitle: "Slobodne aktivnosti",
     hobbiesIntro: "Iskustvo u dizajnu stičem i dalje razvijam u slobodno vrijeme. Radim na izradi funkcionalnih i estetski prilagođenih elemenata za interakciju unutar korisničkog interfejsa, kao i na dizajnu web stranica i aplikacija, što uključuje:",
     ux: "razumijevanje principa UX dizajna, s fokusom na pristupačnost i jednostavnost korištenja",
@@ -63,23 +63,26 @@ const translations = {
 
 
 
-const langSwitch = document.getElementById('lang-switch');
-let currentLang = 'hr';
+document.addEventListener('DOMContentLoaded', () => {
+  const langSwitch = document.getElementById('lang-switch');
+  if (!langSwitch) return;
 
-function setLanguage(lang) {
-  document.querySelectorAll('[data-translate-key]').forEach(el => {
-    const key = el.getAttribute('data-translate-key');
-    if (translations[lang][key]) {
-      el.textContent = translations[lang][key];
-    }
+  let currentLang = (langSwitch.dataset.lang === 'en') ? 'en' : 'hr';
+
+  function setLanguage(lang) {
+    document.querySelectorAll('[data-translate-key]').forEach(el => {
+      const key = el.getAttribute('data-translate-key');
+      if (translations[lang][key]) {
+        el.textContent = translations[lang][key];
+      }
+    });
+    langSwitch.textContent = lang === 'hr' ? 'EN' : 'HR';
+    currentLang = lang;
+  }
+
+  langSwitch.addEventListener('click', () => {
+    setLanguage(currentLang === 'hr' ? 'en' : 'hr');
   });
-  langSwitch.textContent = lang === 'hr' ? 'EN' : 'HR';
-  currentLang = lang;
-}
 
-langSwitch.addEventListener('click', () => {
-  setLanguage(currentLang === 'hr' ? 'en' : 'hr');
+  setLanguage(currentLang);
 });
-
-// Set initial language
-setLanguage(currentLang); 
