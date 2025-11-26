@@ -129,26 +129,6 @@ footer {
   color: var(--main-color);
 }
 
-#lang-switch {
-  position: absolute;
-  top: 2.5rem;
-  left: 5rem;
-  z-index: 20;
-  background: none;
-  color: #614654;
-  font-size: 1.2rem;
-  font-family: inherit;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  font-weight: 500;
-  padding: 0.2rem 0.7rem;
-  transition: background 0.2s;
-}
-#lang-switch:focus {
-  background: rgba(38,12,26,0.07);
-}
-
 h1, h2, h3, h4 {
   margin-top: 2rem;
   color: #614654;
