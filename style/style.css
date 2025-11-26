@@ -104,6 +104,7 @@ h3, h4 {
   content: '';
   width: 15px;
   height: 15px;
+  background-color: #614654;
   background-image: url('../assets/pillar.svg');
   background-size: contain;
   background-repeat: no-repeat;
