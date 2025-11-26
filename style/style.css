@@ -34,7 +34,7 @@ main {
 
 .main-header {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 2rem;
 }
 
@@ -49,10 +49,25 @@ main {
 
 .titles-wrapper {
   color: var(--main-color);
+  flex: 1;
+}
+
+.general-section {
+  margin-top: 1rem;
+}
+
+.general-section h3 {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.general-section .general-text {
+  margin-top: 0;
 }
 
 .main-title {
-  font-size: 1.3rem;
+  font-size: 1rem;
   margin: 0;
   color: #614654;
   font-weight: bold;
@@ -60,7 +75,7 @@ main {
 }
 
 .main-subtitle {
-  font-size: 3rem;
+  font-size: 2rem;
   margin: 0.5rem 0;
   font-weight: bold;
   text-transform: uppercase;
@@ -109,6 +124,7 @@ h3, h4 {
   margin-top: 5px;
 }
 
+
 footer {
   text-align: center;
   margin-top: 2rem;
@@ -128,7 +144,7 @@ footer {
   cursor: pointer;
   font-weight: 500;
   padding: 0.2rem 0.7rem;
-  transition: background 0.2s;
+  transition: all 0.2s;
 }
 #lang-switch:focus {
   background: rgba(38,12,26,0.07);
