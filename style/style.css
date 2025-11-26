@@ -35,7 +35,7 @@ main {
 .main-header {
   display: flex;
   align-items: center;
-  gap: 3rem;
+  gap: 2rem;
 }
 
 .photo-wrapper img {
@@ -48,8 +48,6 @@ main {
 }
 
 .titles-wrapper {
-  flex: 1;
-  padding: 2rem;
   color: var(--main-color);
 }
 
@@ -104,7 +102,6 @@ h3, h4 {
   content: '';
   width: 15px;
   height: 15px;
-  background-color: #614654;
   background-image: url('../assets/pillar.svg');
   background-size: contain;
   background-repeat: no-repeat;
@@ -132,7 +129,7 @@ footer {
   cursor: pointer;
   font-weight: 500;
   padding: 0.2rem 0.7rem;
-  transition: background 0.2s;
+  transition: all 0.2s;
 }
 #lang-switch:focus {
   background: rgba(38,12,26,0.07);
